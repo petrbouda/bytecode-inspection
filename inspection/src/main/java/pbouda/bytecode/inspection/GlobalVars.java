@@ -1,6 +1,6 @@
 package pbouda.bytecode.inspection;
 
-public class GlobalVarsInspection {
+public class GlobalVars {
 
     private String privateGlobalInstance = "Private Global Instance";
 

@@ -1,6 +1,6 @@
 package pbouda.bytecode.inspection;
 
-public class PrintInspection {
+public class SimplePrint {
 
     public static void main(String[] args) {
         print("Print Something");

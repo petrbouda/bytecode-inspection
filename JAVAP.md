@@ -44,33 +44,33 @@ qualified class name. Examples:
 
 Print only public methods
 ```
-$ javap inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
-Compiled from "PrintInspection.java"
-public class pbouda.bytecode.PrintInspection {
-  public pbouda.bytecode.PrintInspection();
+$ javap inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+Compiled from "SimplePrint.java"
+public class pbouda.bytecode.SimplePrint {
+  public pbouda.bytecode.SimplePrint();
   public static void main(java.lang.String[]);
 }
 ```
 
 Information about a class file
 ```
-$ javap -sysinfo inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
+$ javap -sysinfo inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
   Last modified Jul 29, 2018; size 520 bytes
   MD5 checksum bcf3fb55121a260e69b86d5961f58370
-  Compiled from "PrintInspection.java"
-public class pbouda.bytecode.PrintInspection {
-  public pbouda.bytecode.PrintInspection();
+  Compiled from "SimplePrint.java"
+public class pbouda.bytecode.SimplePrint {
+  public pbouda.bytecode.SimplePrint();
   public static void main(java.lang.String[]);
 }
 ```
 
 Print all class' members (even private method)
 ```
-$ javap -p inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
-Compiled from "PrintInspection.java"
-public class pbouda.bytecode.PrintInspection {
-  public pbouda.bytecode.PrintInspection();
+$ javap -p inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+Compiled from "SimplePrint.java"
+public class pbouda.bytecode.SimplePrint {
+  public pbouda.bytecode.SimplePrint();
   public static void main(java.lang.String[]);
   private static void print(java.lang.String);
 }
@@ -78,25 +78,25 @@ public class pbouda.bytecode.PrintInspection {
 
 ALL-IN-ONE (verbose + private methods)
 ```
-javap -v -p inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
+javap -v -p inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
   Last modified Jul 29, 2018; size 520 bytes
   MD5 checksum bcf3fb55121a260e69b86d5961f58370
-  Compiled from "PrintInspection.java"
-public class pbouda.bytecode.PrintInspection
+  Compiled from "SimplePrint.java"
+public class pbouda.bytecode.SimplePrint
   minor version: 0
   major version: 54
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #6                          // pbouda/bytecode/PrintInspection
+  this_class: #6                          // pbouda/bytecode/SimplePrint
   super_class: #7                         // java/lang/Object
   interfaces: 0, fields: 0, methods: 3, attributes: 1
 Constant pool:
    #1 = Methodref          #7.#18         // java/lang/Object."<init>":()V
    #2 = String             #19            // Print Something
-   #3 = Methodref          #6.#20         // pbouda/bytecode/PrintInspection.print:(Ljava/lang/String;)V
+   #3 = Methodref          #6.#20         // pbouda/bytecode/SimplePrint.print:(Ljava/lang/String;)V
    #4 = Fieldref           #21.#22        // java/lang/System.out:Ljava/io/PrintStream;
    #5 = Methodref          #23.#24        // java/io/PrintStream.println:(Ljava/lang/String;)V
-   #6 = Class              #25            // pbouda/bytecode/PrintInspection
+   #6 = Class              #25            // pbouda/bytecode/SimplePrint
    #7 = Class              #26            // java/lang/Object
    #8 = Utf8               <init>
    #9 = Utf8               ()V
@@ -107,7 +107,7 @@ Constant pool:
   #14 = Utf8               print
   #15 = Utf8               (Ljava/lang/String;)V
   #16 = Utf8               SourceFile
-  #17 = Utf8               PrintInspection.java
+  #17 = Utf8               SimplePrint.java
   #18 = NameAndType        #8:#9          // "<init>":()V
   #19 = Utf8               Print Something
   #20 = NameAndType        #14:#15        // print:(Ljava/lang/String;)V
@@ -115,7 +115,7 @@ Constant pool:
   #22 = NameAndType        #28:#29        // out:Ljava/io/PrintStream;
   #23 = Class              #30            // java/io/PrintStream
   #24 = NameAndType        #31:#15        // println:(Ljava/lang/String;)V
-  #25 = Utf8               pbouda/bytecode/PrintInspection
+  #25 = Utf8               pbouda/bytecode/SimplePrint
   #26 = Utf8               java/lang/Object
   #27 = Utf8               java/lang/System
   #28 = Utf8               out
@@ -123,7 +123,7 @@ Constant pool:
   #30 = Utf8               java/io/PrintStream
   #31 = Utf8               println
 {
-  public pbouda.bytecode.PrintInspection();
+  public pbouda.bytecode.SimplePrint();
     descriptor: ()V
     flags: (0x0001) ACC_PUBLIC
     Code:
@@ -159,5 +159,5 @@ Constant pool:
         line 10: 0
         line 11: 7
 }
-SourceFile: "PrintInspection.java"
+SourceFile: "SimplePrint.java"
 ```
