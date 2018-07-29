@@ -1,8 +1,31 @@
 # Bytecode Inspection
 
-```bash
-mvn clean compile
+
+### Compile Modules
+
 ```
+javac -d out --module-source-path src -m bytecode.inspection
+```
+- Module has to be in the same package what is the name of the module
+
+### Debug Information in Compiled Code
+
+- It increases the size of the class files, thus increasing load time.
+- During an execution this information is completely ignored (no difference in performance)
+- Debugging information is meta information only.
+- Use **-g** option of javac
+- Useful for debugging purposes if we don't have source code 
+- **BY DEFAULT**: without specifying **-g**
+   - Only line numbers and source file information is generated
+- Specifying **-g** includes local variable debugging information as well (We can see the real name of variables)
+
+- What a debug info is included: -g:[keyword list] (comma separated list)
+
+**source**: Source file debugging information.
+**lines**: Line number debugging information.
+**vars**: Local variable debugging information.
+
+- **-g:none** doesn't generate any debug information.
 
 ```
 $ javap -version
@@ -46,20 +69,22 @@ qualified class name. Examples:
    java.lang.Object
 ```
 
+Print only public method
 ```
-$ javap target/classes/pbouda/bytecode/PrintInspection.class
-Compiled from "LambdaInspection.java"
+$ javap out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+Compiled from "PrintInspection.java"
 public class pbouda.bytecode.PrintInspection {
   public pbouda.bytecode.PrintInspection();
   public static void main(java.lang.String[]);
 }
 ```
 
+Information about a class file
 ```
-$ javap -sysinfo target/classes/pbouda/bytecode/PrintInspection.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/target/classes/pbouda/bytecode/PrintInspection.class
-  Last modified Jul 29, 2018; size 586 bytes
-  MD5 checksum 83f01a70681231b05640921e1a4f6641
+$ javap -sysinfo out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+  Last modified Jul 29, 2018; size 520 bytes
+  MD5 checksum bcf3fb55121a260e69b86d5961f58370
   Compiled from "PrintInspection.java"
 public class pbouda.bytecode.PrintInspection {
   public pbouda.bytecode.PrintInspection();
@@ -69,7 +94,7 @@ public class pbouda.bytecode.PrintInspection {
 
 Print all class' members (even private method)
 ```
-$ javap -p target/classes/pbouda/bytecode/PrintInspection.class
+$ javap -p out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
 Compiled from "PrintInspection.java"
 public class pbouda.bytecode.PrintInspection {
   public pbouda.bytecode.PrintInspection();
@@ -78,43 +103,12 @@ public class pbouda.bytecode.PrintInspection {
 }
 ```
 
-Print line number and local variable tables
+ALL-IN-ONE (verbose + private methods)
 ```
-$ javap -p -l target/classes/pbouda/bytecode/PrintInspection.class
-Compiled from "PrintInspection.java"
-public class pbouda.bytecode.PrintInspection {
-  public pbouda.bytecode.PrintInspection();
-    LineNumberTable:
-      line 3: 0
-    LocalVariableTable:
-      Start  Length  Slot  Name   Signature
-          0       5     0  this   Lpbouda/bytecode/PrintInspection;
-
-  public static void main(java.lang.String[]);
-    LineNumberTable:
-      line 6: 0
-      line 7: 5
-    LocalVariableTable:
-      Start  Length  Slot  Name   Signature
-          0       6     0  args   [Ljava/lang/String;
-
-  private static void print(java.lang.String);
-    LineNumberTable:
-      line 10: 0
-      line 11: 7
-    LocalVariableTable:
-      Start  Length  Slot  Name   Signature
-          0       8     0 statement   Ljava/lang/String;
-}
-```
-
-ALL-IN-ONE
-
-```
-javap -v -p target/classes/pbouda/bytecode/PrintInspection.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/target/classes/pbouda/bytecode/PrintInspection.class
-  Last modified Jul 29, 2018; size 700 bytes
-  MD5 checksum a396f0e3b97c2edf6a010296dff63ae9
+javap -v -p out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+  Last modified Jul 29, 2018; size 520 bytes
+  MD5 checksum bcf3fb55121a260e69b86d5961f58370
   Compiled from "PrintInspection.java"
 public class pbouda.bytecode.PrintInspection
   minor version: 0
@@ -124,44 +118,37 @@ public class pbouda.bytecode.PrintInspection
   super_class: #7                         // java/lang/Object
   interfaces: 0, fields: 0, methods: 3, attributes: 1
 Constant pool:
-   #1 = Methodref          #7.#25         // java/lang/Object."<init>":()V
-   #2 = String             #26            // Print Something
-   #3 = Methodref          #6.#27         // pbouda/bytecode/PrintInspection.print:(Ljava/lang/String;)V
-   #4 = Fieldref           #28.#29        // java/lang/System.out:Ljava/io/PrintStream;
-   #5 = Methodref          #30.#31        // java/io/PrintStream.println:(Ljava/lang/String;)V
-   #6 = Class              #32            // pbouda/bytecode/PrintInspection
-   #7 = Class              #33            // java/lang/Object
+   #1 = Methodref          #7.#18         // java/lang/Object."<init>":()V
+   #2 = String             #19            // Print Something
+   #3 = Methodref          #6.#20         // pbouda/bytecode/PrintInspection.print:(Ljava/lang/String;)V
+   #4 = Fieldref           #21.#22        // java/lang/System.out:Ljava/io/PrintStream;
+   #5 = Methodref          #23.#24        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #6 = Class              #25            // pbouda/bytecode/PrintInspection
+   #7 = Class              #26            // java/lang/Object
    #8 = Utf8               <init>
    #9 = Utf8               ()V
   #10 = Utf8               Code
   #11 = Utf8               LineNumberTable
-  #12 = Utf8               LocalVariableTable
-  #13 = Utf8               this
-  #14 = Utf8               Lpbouda/bytecode/PrintInspection;
-  #15 = Utf8               main
-  #16 = Utf8               ([Ljava/lang/String;)V
-  #17 = Utf8               args
-  #18 = Utf8               [Ljava/lang/String;
-  #19 = Utf8               print
-  #20 = Utf8               (Ljava/lang/String;)V
-  #21 = Utf8               statement
-  #22 = Utf8               Ljava/lang/String;
-  #23 = Utf8               SourceFile
-  #24 = Utf8               PrintInspection.java
-  #25 = NameAndType        #8:#9          // "<init>":()V
-  #26 = Utf8               Print Something
-  #27 = NameAndType        #19:#20        // print:(Ljava/lang/String;)V
-  #28 = Class              #34            // java/lang/System
-  #29 = NameAndType        #35:#36        // out:Ljava/io/PrintStream;
-  #30 = Class              #37            // java/io/PrintStream
-  #31 = NameAndType        #38:#20        // println:(Ljava/lang/String;)V
-  #32 = Utf8               pbouda/bytecode/PrintInspection
-  #33 = Utf8               java/lang/Object
-  #34 = Utf8               java/lang/System
-  #35 = Utf8               out
-  #36 = Utf8               Ljava/io/PrintStream;
-  #37 = Utf8               java/io/PrintStream
-  #38 = Utf8               println
+  #12 = Utf8               main
+  #13 = Utf8               ([Ljava/lang/String;)V
+  #14 = Utf8               print
+  #15 = Utf8               (Ljava/lang/String;)V
+  #16 = Utf8               SourceFile
+  #17 = Utf8               PrintInspection.java
+  #18 = NameAndType        #8:#9          // "<init>":()V
+  #19 = Utf8               Print Something
+  #20 = NameAndType        #14:#15        // print:(Ljava/lang/String;)V
+  #21 = Class              #27            // java/lang/System
+  #22 = NameAndType        #28:#29        // out:Ljava/io/PrintStream;
+  #23 = Class              #30            // java/io/PrintStream
+  #24 = NameAndType        #31:#15        // println:(Ljava/lang/String;)V
+  #25 = Utf8               pbouda/bytecode/PrintInspection
+  #26 = Utf8               java/lang/Object
+  #27 = Utf8               java/lang/System
+  #28 = Utf8               out
+  #29 = Utf8               Ljava/io/PrintStream;
+  #30 = Utf8               java/io/PrintStream
+  #31 = Utf8               println
 {
   public pbouda.bytecode.PrintInspection();
     descriptor: ()V
@@ -173,9 +160,6 @@ Constant pool:
          4: return
       LineNumberTable:
         line 3: 0
-      LocalVariableTable:
-        Start  Length  Slot  Name   Signature
-            0       5     0  this   Lpbouda/bytecode/PrintInspection;
 
   public static void main(java.lang.String[]);
     descriptor: ([Ljava/lang/String;)V
@@ -188,9 +172,6 @@ Constant pool:
       LineNumberTable:
         line 6: 0
         line 7: 5
-      LocalVariableTable:
-        Start  Length  Slot  Name   Signature
-            0       6     0  args   [Ljava/lang/String;
 
   private static void print(java.lang.String);
     descriptor: (Ljava/lang/String;)V
@@ -204,9 +185,6 @@ Constant pool:
       LineNumberTable:
         line 10: 0
         line 11: 7
-      LocalVariableTable:
-        Start  Length  Slot  Name   Signature
-            0       8     0 statement   Ljava/lang/String;
 }
 SourceFile: "PrintInspection.java"
 ```
