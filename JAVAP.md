@@ -44,7 +44,7 @@ qualified class name. Examples:
 
 Print only public methods
 ```
-$ javap out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+$ javap inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
 Compiled from "PrintInspection.java"
 public class pbouda.bytecode.PrintInspection {
   public pbouda.bytecode.PrintInspection();
@@ -54,8 +54,8 @@ public class pbouda.bytecode.PrintInspection {
 
 Information about a class file
 ```
-$ javap -sysinfo out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+$ javap -sysinfo inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
   Last modified Jul 29, 2018; size 520 bytes
   MD5 checksum bcf3fb55121a260e69b86d5961f58370
   Compiled from "PrintInspection.java"
@@ -67,7 +67,7 @@ public class pbouda.bytecode.PrintInspection {
 
 Print all class' members (even private method)
 ```
-$ javap -p out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+$ javap -p inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
 Compiled from "PrintInspection.java"
 public class pbouda.bytecode.PrintInspection {
   public pbouda.bytecode.PrintInspection();
@@ -78,8 +78,8 @@ public class pbouda.bytecode.PrintInspection {
 
 ALL-IN-ONE (verbose + private methods)
 ```
-javap -v -p out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/out/bytecode.inspection/pbouda/bytecode/PrintInspection.class
+javap -v -p inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/PrintInspection.class
   Last modified Jul 29, 2018; size 520 bytes
   MD5 checksum bcf3fb55121a260e69b86d5961f58370
   Compiled from "PrintInspection.java"

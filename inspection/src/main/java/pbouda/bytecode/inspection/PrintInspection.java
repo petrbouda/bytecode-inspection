@@ -1,4 +1,4 @@
-package pbouda.bytecode;
+package pbouda.bytecode.inspection;
 
 public class PrintInspection {
 
@@ -9,5 +9,4 @@ public class PrintInspection {
     private static void print(String statement) {
         System.out.println(statement);
     }
-
 }

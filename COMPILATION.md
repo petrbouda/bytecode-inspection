@@ -3,7 +3,7 @@
 ### Compile Modules
 
 ```
-javac -d out --module-source-path src -m bytecode.inspection
+javac -d out --module-source-path <source-folder> -m <root-module>
 ```
 - Module has to be in the same package what is the name of the module
 
