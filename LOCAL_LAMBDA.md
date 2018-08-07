@@ -1,3 +1,12 @@
+# Local Lambda
+
+- Created a private static method implementing our functional interface
+- `BootstrapMethod` for LambdaMetafactory
+- https://docs.oracle.com/javase/10/docs/api/java/lang/invoke/LambdaMetafactory.html
+- `CallSite` is a holder for MethodHandler variable
+- https://docs.oracle.com/javase/10/docs/api/java/lang/invoke/CallSite.html
+- `InvokeDynamic #0:apply:()Ljava/util/function/Function;` - `#0` is an index of BootstrapMethod
+
 ```
 javap -v -p inspection/target/classes/pbouda/bytecode/inspection/LocalLambda.class
 Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/LocalLambda.class

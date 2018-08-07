@@ -8,7 +8,7 @@ private static java.lang.String lambda$new$0(java.lang.String);
 
 - Static method generated - `ACC_SYNTHETIC`
 - Lambda registered in a constructor
-- Generated InnerClass, Bootstrap Method attributes
+- More info in LOCAL_LAMBDA.md
 
 ```
 $ javap -v -p inspection/target/classes/pbouda/bytecode/inspection/InstanceGlobalLambda.class
