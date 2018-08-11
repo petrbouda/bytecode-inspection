@@ -1,4 +1,4 @@
-package pbouda.bytecode.inspection;
+package pbouda.bytecode.examples;
 
 import java.util.function.Function;
 import java.util.function.Predicate;

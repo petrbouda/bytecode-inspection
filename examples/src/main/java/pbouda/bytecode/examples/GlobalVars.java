@@ -1,4 +1,4 @@
-package pbouda.bytecode.inspection;
+package pbouda.bytecode.examples;
 
 public class GlobalVars {
 

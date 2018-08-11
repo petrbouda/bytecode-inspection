@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pbouda.sandbox</groupId>
-    <artifactId>bytecode-inspection</artifactId>
+    <artifactId>bytecode-practise</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>inspection</module>
+        <module>examples</module>
         <module>module-a</module>
     </modules>
 

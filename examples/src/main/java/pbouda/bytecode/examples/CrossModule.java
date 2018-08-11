@@ -1,4 +1,4 @@
-package pbouda.bytecode.inspection;
+package pbouda.bytecode.examples;
 
 import org.apache.commons.lang3.StringUtils;
 import pbouda.bytecode.modulea.Printer;
