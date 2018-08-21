@@ -1,5 +1,12 @@
 # Bytecode Practise
 
+```
+$ java -version
+java version "10.0.2" 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+```
+
 https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-4.html
 
 #### Opcodes Invoke* / Method Handle / BootstrapMethod (Class-File Argument)
