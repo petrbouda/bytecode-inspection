@@ -1,4 +1,4 @@
-# VOLATILE FIELD
+# Volatile Field
 
 - Absolutely no difference apart from `ACC_VOLATILE` flag.
 
