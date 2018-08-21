@@ -22,4 +22,14 @@ The call site and target method can change during the lifetime of the program
 
 - try-with-resources
 - exception
-- synchronized
+- synchronized (method and block)
+- inner classes
+- anonymous classes
+- double brace
+```
+new ArrayList<Integer>() {{
+   add(1);
+   add(2);
+}};
+```
+- generics / types / instanceof
