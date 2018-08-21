@@ -13,7 +13,7 @@ public class ThrowException {
     public void catchException() {
         try {
             throw new IllegalArgumentException();
-        } catch (Exception ex) {
+        } catch (IllegalArgumentException ex) {
             System.out.println();
         }
     }

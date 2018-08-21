@@ -1,16 +1,13 @@
 package pbouda.bytecode.examples;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringReader;
 
 public class TryWithResources {
 
-    public String tryWithResources() {
-        try (BufferedReader br = new BufferedReader(new FileReader(getClass().getResource("file.txt").getFile()))) {
-            return br.readLine();
-        } catch (IOException e) {
-            return null;
+    public void tryWithResources() throws IOException {
+        try (StringReader reader = new StringReader("")) {
+            System.out.println(reader.read());
         }
     }
 }
