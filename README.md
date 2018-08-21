@@ -13,3 +13,13 @@ the BSM (and lookup) is done only once and so subsequent calls are fast.
 
 The call site and target method can change during the lifetime of the program
 ```
+
+#### Bytecode Instructions
+
+[https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings]
+
+#### TODO
+
+- try-with-resources
+- exception
+- synchronized
