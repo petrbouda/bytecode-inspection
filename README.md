@@ -20,7 +20,6 @@ The call site and target method can change during the lifetime of the program
 
 #### TODO
 
-- synchronized (method and block)
 - inner classes
 - anonymous classes
 - double brace
