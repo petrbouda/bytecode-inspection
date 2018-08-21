@@ -13,6 +13,7 @@ Exceptions:
 
 #### `catchException()`
 - A structure for catching exceptions
+- `from` and `to` define the scope of try block
 ```
 Exception table:
    from    to  target type
