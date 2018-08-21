@@ -5,6 +5,11 @@
 ```
 javac -d out --module-source-path <source-folder> -m <root-module>
 ```
+
+```
+mvn clean compile
+```
+
 - Module has to be in the same package what is the name of the module
 
 ### Debug Information in Compiled Code
