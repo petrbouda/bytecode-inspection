@@ -1,3 +1,3 @@
-module bytecode.inspection {
+module bytecode.examples {
     requires bytecode.module.a;
 }

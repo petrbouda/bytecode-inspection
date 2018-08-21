@@ -5,23 +5,23 @@
 - `java/lang/invoke/StringConcatFactory.makeConcatWithConstants`
 
 ```
-$ javap -v -p inspection/target/classes/pbouda/bytecode/inspection/StringConcat.class
+$ javap -v -p examples/target/classes/pbouda/bytecode/examples/StringConcat.class
 
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/StringConcat.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/StringConcat.class
   Last modified Jul 29, 2018; size 874 bytes
   MD5 checksum 3918b1e093216edb4cde4809888b8090
   Compiled from "StringConcat.java"
-public class pbouda.bytecode.inspection.StringConcat
+public class pbouda.bytecode.examples.StringConcat
   minor version: 0
   major version: 54
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #3                          // pbouda/bytecode/inspection/StringConcat
+  this_class: #3                          // pbouda/bytecode/examples/StringConcat
   super_class: #4                         // java/lang/Object
   interfaces: 0, fields: 0, methods: 2, attributes: 3
 Constant pool:
    #1 = Methodref          #4.#18         // java/lang/Object."<init>":()V
    #2 = InvokeDynamic      #0:#22         // #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
-   #3 = Class              #23            // pbouda/bytecode/inspection/StringConcat
+   #3 = Class              #23            // pbouda/bytecode/examples/StringConcat
    #4 = Class              #24            // java/lang/Object
    #5 = Utf8               <init>
    #6 = Utf8               ()V
@@ -29,7 +29,7 @@ Constant pool:
    #8 = Utf8               LineNumberTable
    #9 = Utf8               LocalVariableTable
   #10 = Utf8               this
-  #11 = Utf8               Lpbouda/bytecode/inspection/StringConcat;
+  #11 = Utf8               Lpbouda/bytecode/examples/StringConcat;
   #12 = Utf8               concatMethod
   #13 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
   #14 = Utf8               name
@@ -41,7 +41,7 @@ Constant pool:
   #20 = MethodHandle       6:#25          // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
   #21 = String             #26            // Hello \u0001
   #22 = NameAndType        #27:#13        // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
-  #23 = Utf8               pbouda/bytecode/inspection/StringConcat
+  #23 = Utf8               pbouda/bytecode/examples/StringConcat
   #24 = Utf8               java/lang/Object
   #25 = Methodref          #28.#29        // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
   #26 = Utf8               Hello \u0001
@@ -57,7 +57,7 @@ Constant pool:
   #36 = Utf8               java/lang/invoke/MethodHandles$Lookup
   #37 = Utf8               java/lang/invoke/MethodHandles
 {
-  public pbouda.bytecode.inspection.StringConcat();
+  public pbouda.bytecode.examples.StringConcat();
     descriptor: ()V
     flags: (0x0001) ACC_PUBLIC
     Code:
@@ -69,7 +69,7 @@ Constant pool:
         line 3: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0       5     0  this   Lpbouda/bytecode/inspection/StringConcat;
+            0       5     0  this   Lpbouda/bytecode/examples/StringConcat;
 
   private static java.lang.String concatMethod(java.lang.String);
     descriptor: (Ljava/lang/String;)Ljava/lang/String;

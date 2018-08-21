@@ -8,7 +8,7 @@
 ```
 $ javap -v -p module-a/target/classes/module-info.class
 
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/module-a/target/classes/module-info.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/module-a/target/classes/module-info.class
   Last modified Jul 29, 2018; size 261 bytes
   MD5 checksum 8b218685168dc70cd4d36f8b8f7e56cd
   Compiled from "module-info.java"
@@ -57,13 +57,13 @@ Module:
 ```
 
 ```
-$ javap -v -p inspection/target/classes/module-info.class
+$ javap -v -p examples/target/classes/module-info.class
 
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/module-info.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/module-info.class
   Last modified Jul 29, 2018; size 196 bytes
   MD5 checksum 03e96cdcce8b92df4aa37b8a9b4f6364
   Compiled from "module-info.java"
-module bytecode.inspection
+module bytecode.examples
   minor version: 0
   major version: 54
   flags: (0x8000) ACC_MODULE
@@ -75,19 +75,19 @@ Constant pool:
    #2 = Utf8               SourceFile
    #3 = Utf8               module-info.java
    #4 = Utf8               Module
-   #5 = Module             #10            // "bytecode.inspection"
+   #5 = Module             #10            // "bytecode.examples"
    #6 = Module             #11            // "java.base"
    #7 = Utf8               10.0.2
    #8 = Module             #12            // "bytecode.module.a"
    #9 = Utf8               module-info
-  #10 = Utf8               bytecode.inspection
+  #10 = Utf8               bytecode.examples
   #11 = Utf8               java.base
   #12 = Utf8               bytecode.module.a
 {
 }
 SourceFile: "module-info.java"
 Module:
-  #5,0                                    // "bytecode.inspection"
+  #5,0                                    // "bytecode.examples"
   #0
   2                                       // requires
     #6,8000                                 // "java.base" ACC_MANDATED

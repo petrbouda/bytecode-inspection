@@ -16,29 +16,29 @@ assert "foo" == "foo"
 
 
 ```
-$ javap -v -p inspection/target/classes/pbouda/bytecode/inspection/ConstantPoolProperty.class
+$ javap -v -p examples/target/classes/pbouda/bytecode/examples/ConstantPoolProperty.class
 
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/ConstantPoolProperty.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/ConstantPoolProperty.class
   Last modified Aug 7, 2018; size 887 bytes
   MD5 checksum 5441537d84bda1ad1cf5c9bf42804938
   Compiled from "ConstantPoolProperty.java"
-public class pbouda.bytecode.inspection.ConstantPool
+public class pbouda.bytecode.examples.ConstantPool
   minor version: 0
   major version: 54
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #7                          // pbouda/bytecode/inspection/ConstantPoolProperty
+  this_class: #7                          // pbouda/bytecode/examples/ConstantPoolProperty
   super_class: #10                        // java/lang/Object
   interfaces: 0, fields: 4, methods: 3, attributes: 1
 Constant pool:
    #1 = Methodref          #10.#28        // java/lang/Object."<init>":()V
    #2 = String             #29            // NON_CONSTANT
-   #3 = Fieldref           #7.#30         // pbouda/bytecode/inspection/ConstantPoolProperty.instanceNonConstant:Ljava/lang/String;
+   #3 = Fieldref           #7.#30         // pbouda/bytecode/examples/ConstantPoolProperty.instanceNonConstant:Ljava/lang/String;
    #4 = String             #31            // CONSTANT
-   #5 = Fieldref           #7.#32         // pbouda/bytecode/inspection/ConstantPoolProperty.instanceConstant:Ljava/lang/String;
+   #5 = Fieldref           #7.#32         // pbouda/bytecode/examples/ConstantPoolProperty.instanceConstant:Ljava/lang/String;
    #6 = Fieldref           #33.#34        // java/lang/System.out:Ljava/io/PrintStream;
-   #7 = Class              #35            // pbouda/bytecode/inspection/ConstantPoolProperty
+   #7 = Class              #35            // pbouda/bytecode/examples/ConstantPoolProperty
    #8 = Methodref          #36.#37        // java/io/PrintStream.println:(Ljava/lang/String;)V
-   #9 = Fieldref           #7.#38         // pbouda/bytecode/inspection/ConstantPoolProperty.staticNonConstant:Ljava/lang/String;
+   #9 = Fieldref           #7.#38         // pbouda/bytecode/examples/ConstantPoolProperty.staticNonConstant:Ljava/lang/String;
   #10 = Class              #39            // java/lang/Object
   #11 = Utf8               staticNonConstant
   #12 = Utf8               Ljava/lang/String;
@@ -52,7 +52,7 @@ Constant pool:
   #20 = Utf8               LineNumberTable
   #21 = Utf8               LocalVariableTable
   #22 = Utf8               this
-  #23 = Utf8               Lpbouda/bytecode/inspection/ConstantPoolProperty;
+  #23 = Utf8               Lpbouda/bytecode/examples/ConstantPoolProperty;
   #24 = Utf8               method
   #25 = Utf8               <clinit>
   #26 = Utf8               SourceFile
@@ -64,7 +64,7 @@ Constant pool:
   #32 = NameAndType        #16:#12        // instanceConstant:Ljava/lang/String;
   #33 = Class              #40            // java/lang/System
   #34 = NameAndType        #41:#42        // out:Ljava/io/PrintStream;
-  #35 = Utf8               pbouda/bytecode/inspection/ConstantPoolProperty
+  #35 = Utf8               pbouda/bytecode/examples/ConstantPoolProperty
   #36 = Class              #43            // java/io/PrintStream
   #37 = NameAndType        #44:#45        // println:(Ljava/lang/String;)V
   #38 = NameAndType        #11:#12        // staticNonConstant:Ljava/lang/String;
@@ -94,7 +94,7 @@ Constant pool:
     flags: (0x0012) ACC_PRIVATE, ACC_FINAL
     ConstantValue: String CONSTANT
 
-  public pbouda.bytecode.inspection.ConstantPool();
+  public pbouda.bytecode.examples.ConstantPool();
     descriptor: ()V
     flags: (0x0001) ACC_PUBLIC
     Code:
@@ -114,7 +114,7 @@ Constant pool:
         line 8: 10
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0      17     0  this   Lpbouda/bytecode/inspection/ConstantPoolProperty;
+            0      17     0  this   Lpbouda/bytecode/examples/ConstantPoolProperty;
 
   public void method();
     descriptor: ()V
@@ -143,7 +143,7 @@ Constant pool:
         line 15: 35
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0      36     0  this   Lpbouda/bytecode/inspection/ConstantPoolProperty;
+            0      36     0  this   Lpbouda/bytecode/examples/ConstantPoolProperty;
 
   static {};
     descriptor: ()V

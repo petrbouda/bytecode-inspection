@@ -11,30 +11,30 @@ private static java.lang.String lambda$new$0(java.lang.String);
 - More info in LOCAL_LAMBDA.md
 
 ```
-$ javap -v -p inspection/target/classes/pbouda/bytecode/inspection/InstanceGlobalLambda.class
+$ javap -v -p examples/target/classes/pbouda/bytecode/examples/InstanceGlobalLambda.class
 
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/InstanceGlobalLambda.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/InstanceGlobalLambda.class
   Last modified Jul 29, 2018; size 1812 bytes
   MD5 checksum 97d0a7cdb9cae156ce972ab0fccfa076
   Compiled from "InstanceGlobalLambda.java"
-public class pbouda.bytecode.inspection.InstanceGlobalLambda
+public class pbouda.bytecode.examples.InstanceGlobalLambda
   minor version: 0
   major version: 54
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #10                         // pbouda/bytecode/inspection/InstanceGlobalLambda
+  this_class: #10                         // pbouda/bytecode/examples/InstanceGlobalLambda
   super_class: #11                        // java/lang/Object
   interfaces: 0, fields: 1, methods: 3, attributes: 3
 Constant pool:
    #1 = Methodref          #11.#31        // java/lang/Object."<init>":()V
    #2 = InvokeDynamic      #0:#37         // #0:apply:()Ljava/util/function/Function;
-   #3 = Fieldref           #10.#38        // pbouda/bytecode/inspection/InstanceGlobalLambda.ENHANCE_FUNCTION:Ljava/util/function/Function;
+   #3 = Fieldref           #10.#38        // pbouda/bytecode/examples/InstanceGlobalLambda.ENHANCE_FUNCTION:Ljava/util/function/Function;
    #4 = String             #39            // Hello World
    #5 = InterfaceMethodref #40.#41        // java/util/function/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
    #6 = Class              #42            // java/lang/String
    #7 = Fieldref           #43.#44        // java/lang/System.out:Ljava/io/PrintStream;
    #8 = Methodref          #45.#46        // java/io/PrintStream.println:(Ljava/lang/String;)V
    #9 = InvokeDynamic      #1:#49         // #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
-  #10 = Class              #50            // pbouda/bytecode/inspection/InstanceGlobalLambda
+  #10 = Class              #50            // pbouda/bytecode/examples/InstanceGlobalLambda
   #11 = Class              #51            // java/lang/Object
   #12 = Utf8               ENHANCE_FUNCTION
   #13 = Utf8               Ljava/util/function/Function;
@@ -46,7 +46,7 @@ Constant pool:
   #19 = Utf8               LineNumberTable
   #20 = Utf8               LocalVariableTable
   #21 = Utf8               this
-  #22 = Utf8               Lpbouda/bytecode/inspection/InstanceGlobalLambda;
+  #22 = Utf8               Lpbouda/bytecode/examples/InstanceGlobalLambda;
   #23 = Utf8               instanceMethod
   #24 = Utf8               helloWorld
   #25 = Utf8               Ljava/lang/String;
@@ -59,7 +59,7 @@ Constant pool:
   #32 = Utf8               BootstrapMethods
   #33 = MethodHandle       6:#52          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
   #34 = MethodType         #53            //  (Ljava/lang/Object;)Ljava/lang/Object;
-  #35 = MethodHandle       6:#54          // REF_invokeStatic pbouda/bytecode/inspection/InstanceGlobalLambda.lambda$new$0:(Ljava/lang/String;)Ljava/lang/String;
+  #35 = MethodHandle       6:#54          // REF_invokeStatic pbouda/bytecode/examples/InstanceGlobalLambda.lambda$new$0:(Ljava/lang/String;)Ljava/lang/String;
   #36 = MethodType         #27            //  (Ljava/lang/String;)Ljava/lang/String;
   #37 = NameAndType        #55:#56        // apply:()Ljava/util/function/Function;
   #38 = NameAndType        #12:#13        // ENHANCE_FUNCTION:Ljava/util/function/Function;
@@ -74,11 +74,11 @@ Constant pool:
   #47 = MethodHandle       6:#64          // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
   #48 = String             #65            // ENHANCED: \u0001
   #49 = NameAndType        #66:#27        // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
-  #50 = Utf8               pbouda/bytecode/inspection/InstanceGlobalLambda
+  #50 = Utf8               pbouda/bytecode/examples/InstanceGlobalLambda
   #51 = Utf8               java/lang/Object
   #52 = Methodref          #67.#68        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
   #53 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
-  #54 = Methodref          #10.#69        // pbouda/bytecode/inspection/InstanceGlobalLambda.lambda$new$0:(Ljava/lang/String;)Ljava/lang/String;
+  #54 = Methodref          #10.#69        // pbouda/bytecode/examples/InstanceGlobalLambda.lambda$new$0:(Ljava/lang/String;)Ljava/lang/String;
   #55 = Utf8               apply
   #56 = Utf8               ()Ljava/util/function/Function;
   #57 = Utf8               java/util/function/Function
@@ -113,7 +113,7 @@ Constant pool:
     flags: (0x0012) ACC_PRIVATE, ACC_FINAL
     Signature: #15                          // Ljava/util/function/Function<Ljava/lang/String;Ljava/lang/String;>;
 
-  public pbouda.bytecode.inspection.InstanceGlobalLambda();
+  public pbouda.bytecode.examples.InstanceGlobalLambda();
     descriptor: ()V
     flags: (0x0001) ACC_PUBLIC
     Code:
@@ -129,7 +129,7 @@ Constant pool:
         line 7: 4
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0      14     0  this   Lpbouda/bytecode/inspection/InstanceGlobalLambda;
+            0      14     0  this   Lpbouda/bytecode/examples/InstanceGlobalLambda;
 
   public void instanceMethod();
     descriptor: ()V
@@ -152,7 +152,7 @@ Constant pool:
         line 13: 22
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0      23     0  this   Lpbouda/bytecode/inspection/InstanceGlobalLambda;
+            0      23     0  this   Lpbouda/bytecode/examples/InstanceGlobalLambda;
            15       8     1 helloWorld   Ljava/lang/String;
 
   private static java.lang.String lambda$new$0(java.lang.String);
@@ -176,7 +176,7 @@ BootstrapMethods:
   0: #33 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
     Method arguments:
       #34 (Ljava/lang/Object;)Ljava/lang/Object;
-      #35 REF_invokeStatic pbouda/bytecode/inspection/InstanceGlobalLambda.lambda$new$0:(Ljava/lang/String;)Ljava/lang/String;
+      #35 REF_invokeStatic pbouda/bytecode/examples/InstanceGlobalLambda.lambda$new$0:(Ljava/lang/String;)Ljava/lang/String;
       #36 (Ljava/lang/String;)Ljava/lang/String;
   1: #47 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
     Method arguments:

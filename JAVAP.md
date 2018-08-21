@@ -44,7 +44,7 @@ qualified class name. Examples:
 
 Print only public methods
 ```
-$ javap inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+$ javap examples/target/classes/pbouda/bytecode/examples/SimplePrint.class
 Compiled from "SimplePrint.java"
 public class pbouda.bytecode.SimplePrint {
   public pbouda.bytecode.SimplePrint();
@@ -54,8 +54,8 @@ public class pbouda.bytecode.SimplePrint {
 
 Information about a class file
 ```
-$ javap -sysinfo inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+$ javap -sysinfo examples/target/classes/pbouda/bytecode/examples/SimplePrint.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/SimplePrint.class
   Last modified Jul 29, 2018; size 520 bytes
   MD5 checksum bcf3fb55121a260e69b86d5961f58370
   Compiled from "SimplePrint.java"
@@ -67,7 +67,7 @@ public class pbouda.bytecode.SimplePrint {
 
 Print all class' members (even private method)
 ```
-$ javap -p inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+$ javap -p examples/target/classes/pbouda/bytecode/examples/SimplePrint.class
 Compiled from "SimplePrint.java"
 public class pbouda.bytecode.SimplePrint {
   public pbouda.bytecode.SimplePrint();
@@ -78,8 +78,8 @@ public class pbouda.bytecode.SimplePrint {
 
 ALL-IN-ONE (verbose + private methods)
 ```
-javap -v -p inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/SimplePrint.class
+javap -v -p examples/target/classes/pbouda/bytecode/examples/SimplePrint.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/SimplePrint.class
   Last modified Jul 29, 2018; size 520 bytes
   MD5 checksum bcf3fb55121a260e69b86d5961f58370
   Compiled from "SimplePrint.java"

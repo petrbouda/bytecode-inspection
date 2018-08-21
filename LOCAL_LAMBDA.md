@@ -8,16 +8,16 @@
 - `InvokeDynamic #0:apply:()Ljava/util/function/Function;` - `#0` is an index of BootstrapMethod
 
 ```
-javap -v -p inspection/target/classes/pbouda/bytecode/inspection/LocalLambda.class
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/LocalLambda.class
+javap -v -p examples/target/classes/pbouda/bytecode/examples/LocalLambda.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/LocalLambda.class
   Last modified Jul 29, 2018; size 1489 bytes
   MD5 checksum 7c1246926857f4790edf72fa799dbe07
   Compiled from "LocalLambda.java"
-public class pbouda.bytecode.inspection.LocalLambda
+public class pbouda.bytecode.examples.LocalLambda
   minor version: 0
   major version: 54
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #8                          // pbouda/bytecode/inspection/LocalLambda
+  this_class: #8                          // pbouda/bytecode/examples/LocalLambda
   super_class: #9                         // java/lang/Object
   interfaces: 0, fields: 0, methods: 3, attributes: 3
 Constant pool:
@@ -28,7 +28,7 @@ Constant pool:
    #5 = InterfaceMethodref #38.#39        // java/util/function/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
    #6 = Class              #40            // java/lang/String
    #7 = Methodref          #41.#42        // java/io/PrintStream.println:(Ljava/lang/String;)V
-   #8 = Class              #43            // pbouda/bytecode/inspection/LocalLambda
+   #8 = Class              #43            // pbouda/bytecode/examples/LocalLambda
    #9 = Class              #44            // java/lang/Object
   #10 = Utf8               <init>
   #11 = Utf8               ()V
@@ -36,7 +36,7 @@ Constant pool:
   #13 = Utf8               LineNumberTable
   #14 = Utf8               LocalVariableTable
   #15 = Utf8               this
-  #16 = Utf8               Lpbouda/bytecode/inspection/LocalLambda;
+  #16 = Utf8               Lpbouda/bytecode/examples/LocalLambda;
   #17 = Utf8               instanceMethod
   #18 = Utf8               magicLambda
   #19 = Utf8               Ljava/util/function/Function;
@@ -52,7 +52,7 @@ Constant pool:
   #29 = Utf8               BootstrapMethods
   #30 = MethodHandle       6:#45          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
   #31 = MethodType         #46            //  (Ljava/lang/Object;)Ljava/lang/Object;
-  #32 = MethodHandle       6:#47          // REF_invokeStatic pbouda/bytecode/inspection/LocalLambda.lambda$instanceMethod$0:(Ljava/lang/String;)Ljava/lang/String;
+  #32 = MethodHandle       6:#47          // REF_invokeStatic pbouda/bytecode/examples/LocalLambda.lambda$instanceMethod$0:(Ljava/lang/String;)Ljava/lang/String;
   #33 = MethodType         #23            //  (Ljava/lang/String;)Ljava/lang/String;
   #34 = NameAndType        #48:#49        // apply:()Ljava/util/function/Function;
   #35 = Class              #50            // java/lang/System
@@ -63,11 +63,11 @@ Constant pool:
   #40 = Utf8               java/lang/String
   #41 = Class              #54            // java/io/PrintStream
   #42 = NameAndType        #55:#56        // println:(Ljava/lang/String;)V
-  #43 = Utf8               pbouda/bytecode/inspection/LocalLambda
+  #43 = Utf8               pbouda/bytecode/examples/LocalLambda
   #44 = Utf8               java/lang/Object
   #45 = Methodref          #57.#58        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
   #46 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
-  #47 = Methodref          #8.#59         // pbouda/bytecode/inspection/LocalLambda.lambda$instanceMethod$0:(Ljava/lang/String;)Ljava/lang/String;
+  #47 = Methodref          #8.#59         // pbouda/bytecode/examples/LocalLambda.lambda$instanceMethod$0:(Ljava/lang/String;)Ljava/lang/String;
   #48 = Utf8               apply
   #49 = Utf8               ()Ljava/util/function/Function;
   #50 = Utf8               java/lang/System
@@ -90,7 +90,7 @@ Constant pool:
   #67 = Utf8               java/lang/invoke/MethodHandles$Lookup
   #68 = Utf8               java/lang/invoke/MethodHandles
 {
-  public pbouda.bytecode.inspection.LocalLambda();
+  public pbouda.bytecode.examples.LocalLambda();
     descriptor: ()V
     flags: (0x0001) ACC_PUBLIC
     Code:
@@ -102,7 +102,7 @@ Constant pool:
         line 5: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0       5     0  this   Lpbouda/bytecode/inspection/LocalLambda;
+            0       5     0  this   Lpbouda/bytecode/examples/LocalLambda;
 
   public void instanceMethod();
     descriptor: ()V
@@ -124,7 +124,7 @@ Constant pool:
         line 10: 23
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0      24     0  this   Lpbouda/bytecode/inspection/LocalLambda;
+            0      24     0  this   Lpbouda/bytecode/examples/LocalLambda;
             6      18     1 magicLambda   Ljava/util/function/Function;
       LocalVariableTypeTable:
         Start  Length  Slot  Name   Signature
@@ -150,6 +150,6 @@ BootstrapMethods:
   0: #30 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
     Method arguments:
       #31 (Ljava/lang/Object;)Ljava/lang/Object;
-      #32 REF_invokeStatic pbouda/bytecode/inspection/LocalLambda.lambda$instanceMethod$0:(Ljava/lang/String;)Ljava/lang/String;
+      #32 REF_invokeStatic pbouda/bytecode/examples/LocalLambda.lambda$instanceMethod$0:(Ljava/lang/String;)Ljava/lang/String;
       #33 (Ljava/lang/String;)Ljava/lang/String;
 ```

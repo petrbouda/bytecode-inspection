@@ -4,40 +4,40 @@
 - Static Global Vars initiated in static-init block
 
 ```
-$ javap -v -p inspection/target/classes/pbouda/bytecode/inspection/GlobalVars.class
+$ javap -v -p examples/target/classes/pbouda/bytecode/examples/GlobalVars.class
 
-Classfile /Users/pbouda/IdeaProjects/bytecode-inspection/inspection/target/classes/pbouda/bytecode/inspection/GlobalVars.class
+Classfile /Users/pbouda/IdeaProjects/bytecode-examples/examples/target/classes/pbouda/bytecode/examples/GlobalVars.class
   Last modified Jul 29, 2018; size 1328 bytes
   MD5 checksum 5e67c3aa73d64af56726c5bdb786d87b
   Compiled from "GlobalVars.java"
-public class pbouda.bytecode.inspection.GlobalVars
+public class pbouda.bytecode.examples.GlobalVars
   minor version: 0
   major version: 54
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #20                         // pbouda/bytecode/inspection/GlobalVars
+  this_class: #20                         // pbouda/bytecode/examples/GlobalVars
   super_class: #21                        // java/lang/Object
   interfaces: 0, fields: 13, methods: 2, attributes: 1
 Constant pool:
    #1 = Methodref          #21.#48        // java/lang/Object."<init>":()V
    #2 = String             #49            // Private Global Instance
-   #3 = Fieldref           #20.#50        // pbouda/bytecode/inspection/GlobalVars.privateGlobalInstance:Ljava/lang/String;
+   #3 = Fieldref           #20.#50        // pbouda/bytecode/examples/GlobalVars.privateGlobalInstance:Ljava/lang/String;
    #4 = String             #51            // Public Global Instance
-   #5 = Fieldref           #20.#52        // pbouda/bytecode/inspection/GlobalVars.publicGlobalInstance:Ljava/lang/String;
+   #5 = Fieldref           #20.#52        // pbouda/bytecode/examples/GlobalVars.publicGlobalInstance:Ljava/lang/String;
    #6 = String             #53            // Protected Global Instance
-   #7 = Fieldref           #20.#54        // pbouda/bytecode/inspection/GlobalVars.protectedGlobalInstance:Ljava/lang/String;
+   #7 = Fieldref           #20.#54        // pbouda/bytecode/examples/GlobalVars.protectedGlobalInstance:Ljava/lang/String;
    #8 = String             #55            // Package-Private Global Instance
-   #9 = Fieldref           #20.#56        // pbouda/bytecode/inspection/GlobalVars.packageGlobalInstance:Ljava/lang/String;
-  #10 = Fieldref           #20.#57        // pbouda/bytecode/inspection/GlobalVars.privatePrimitive:I
+   #9 = Fieldref           #20.#56        // pbouda/bytecode/examples/GlobalVars.packageGlobalInstance:Ljava/lang/String;
+  #10 = Fieldref           #20.#57        // pbouda/bytecode/examples/GlobalVars.privatePrimitive:I
   #11 = Methodref          #58.#59        // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
-  #12 = Fieldref           #20.#60        // pbouda/bytecode/inspection/GlobalVars.privateGlobalStatic:Ljava/lang/Integer;
-  #13 = Fieldref           #20.#61        // pbouda/bytecode/inspection/GlobalVars.PRIVATE_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
-  #14 = Fieldref           #20.#62        // pbouda/bytecode/inspection/GlobalVars.publicGlobalStatic:Ljava/lang/Integer;
-  #15 = Fieldref           #20.#63        // pbouda/bytecode/inspection/GlobalVars.PUBLIC_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
-  #16 = Fieldref           #20.#64        // pbouda/bytecode/inspection/GlobalVars.protectedGlobalStatic:Ljava/lang/Integer;
-  #17 = Fieldref           #20.#65        // pbouda/bytecode/inspection/GlobalVars.PROTECTED_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
-  #18 = Fieldref           #20.#66        // pbouda/bytecode/inspection/GlobalVars.packageGlobalStatic:Ljava/lang/Integer;
-  #19 = Fieldref           #20.#67        // pbouda/bytecode/inspection/GlobalVars.PACKAGE_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
-  #20 = Class              #68            // pbouda/bytecode/inspection/GlobalVars
+  #12 = Fieldref           #20.#60        // pbouda/bytecode/examples/GlobalVars.privateGlobalStatic:Ljava/lang/Integer;
+  #13 = Fieldref           #20.#61        // pbouda/bytecode/examples/GlobalVars.PRIVATE_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
+  #14 = Fieldref           #20.#62        // pbouda/bytecode/examples/GlobalVars.publicGlobalStatic:Ljava/lang/Integer;
+  #15 = Fieldref           #20.#63        // pbouda/bytecode/examples/GlobalVars.PUBLIC_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
+  #16 = Fieldref           #20.#64        // pbouda/bytecode/examples/GlobalVars.protectedGlobalStatic:Ljava/lang/Integer;
+  #17 = Fieldref           #20.#65        // pbouda/bytecode/examples/GlobalVars.PROTECTED_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
+  #18 = Fieldref           #20.#66        // pbouda/bytecode/examples/GlobalVars.packageGlobalStatic:Ljava/lang/Integer;
+  #19 = Fieldref           #20.#67        // pbouda/bytecode/examples/GlobalVars.PACKAGE_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
+  #20 = Class              #68            // pbouda/bytecode/examples/GlobalVars
   #21 = Class              #69            // java/lang/Object
   #22 = Utf8               privateGlobalInstance
   #23 = Utf8               Ljava/lang/String;
@@ -61,7 +61,7 @@ Constant pool:
   #41 = Utf8               LineNumberTable
   #42 = Utf8               LocalVariableTable
   #43 = Utf8               this
-  #44 = Utf8               Lpbouda/bytecode/inspection/GlobalVars;
+  #44 = Utf8               Lpbouda/bytecode/examples/GlobalVars;
   #45 = Utf8               <clinit>
   #46 = Utf8               SourceFile
   #47 = Utf8               GlobalVars.java
@@ -85,7 +85,7 @@ Constant pool:
   #65 = NameAndType        #32:#25        // PROTECTED_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
   #66 = NameAndType        #34:#25        // packageGlobalStatic:Ljava/lang/Integer;
   #67 = NameAndType        #35:#25        // PACKAGE_GLOBAL_FINAL_STATIC:Ljava/lang/Integer;
-  #68 = Utf8               pbouda/bytecode/inspection/GlobalVars
+  #68 = Utf8               pbouda/bytecode/examples/GlobalVars
   #69 = Utf8               java/lang/Object
   #70 = Utf8               java/lang/Integer
   #71 = Utf8               valueOf
@@ -143,7 +143,7 @@ Constant pool:
     descriptor: I
     flags: (0x0002) ACC_PRIVATE
 
-  public pbouda.bytecode.inspection.GlobalVars();
+  public pbouda.bytecode.examples.GlobalVars();
     descriptor: ()V
     flags: (0x0001) ACC_PUBLIC
     Code:
@@ -175,7 +175,7 @@ Constant pool:
         line 29: 28
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0      36     0  this   Lpbouda/bytecode/inspection/GlobalVars;
+            0      36     0  this   Lpbouda/bytecode/examples/GlobalVars;
 
   static {};
     descriptor: ()V
