@@ -4,13 +4,26 @@ public class Synchronized {
 
     private final Object lock = new Object();
 
-    public synchronized int getSynchronizedNumber() {
-        return 1;
+    private Integer number = 1;
+
+
+    public synchronized Integer getSyncMethod() {
+        return number;
     }
 
-    public int getLockedNumber() {
+    public synchronized void setSyncMethod(Integer number) {
+        this.number = number;
+    }
+
+    public synchronized Integer getSyncBlock() {
         synchronized (lock) {
-            return 1;
+            return number;
+        }
+    }
+
+    public synchronized void setSyncBlock(Integer number) {
+        synchronized (lock) {
+            this.number = number;
         }
     }
 }

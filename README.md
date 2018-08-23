@@ -27,7 +27,4 @@ The call site and target method can change during the lifetime of the program
 
 #### TODO
 
-- inner classes
-- anonymous classes
 - generics / types / instanceof
-- varargs
