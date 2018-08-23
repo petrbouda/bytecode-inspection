@@ -22,6 +22,20 @@ StackMapTable: number_of_entries = 1
     stack = [ class java/lang/Throwable ]
 ```
 
+- In fact - *Synchronized block is try-finally block*
+```
+synchronized(foo) {
+    ...
+}
+
+monitor_enter(foo);
+try {
+    ...
+} finally {
+    monitor_exit(foo);
+}
+```
+
 ```
 $ javap -v -p examples/target/classes/pbouda/bytecode/examples/Synchronized.class
 
