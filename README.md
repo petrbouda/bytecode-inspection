@@ -7,6 +7,10 @@ Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
 Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
 ```
 
+#### Bytecode Viewer
+
+https://github.com/Konloch/bytecode-viewer
+
 https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-4.html
 
 #### Opcodes Invoke* / Method Handle / BootstrapMethod (Class-File Argument)
