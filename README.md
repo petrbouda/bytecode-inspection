@@ -28,7 +28,3 @@ The call site and target method can change during the lifetime of the program
 #### Bytecode Instructions
 
 https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings
-
-#### TODO
-
-- generics / types / instanceof / annotations
