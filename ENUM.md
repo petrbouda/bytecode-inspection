@@ -1,3 +1,7 @@
+# Enum
+
+- Enumeration type with additional field is defined as a sub-class
+
 ```
 javap -v -p examples/target/classes/pbouda/bytecode/examples/MyEnum.class          
     
@@ -204,4 +208,73 @@ Signature: #45                          // Ljava/lang/Enum<Lpbouda/bytecode/exam
 SourceFile: "MyEnum.java"
 InnerClasses:
   final #8;                               // class pbouda/bytecode/examples/MyEnum$1
+```
+
+```
+javap -v -p examples/target/classes/pbouda/bytecode/examples/MyEnum\$1.class
+Classfile /home/pbouda/experiments/bytecode-practise/examples/target/classes/pbouda/bytecode/examples/MyEnum$1.class
+  Last modified Apr 5, 2019; size 488 bytes
+  MD5 checksum 41d10f88a6599acd2f188da5548a0d24
+  Compiled from "MyEnum.java"
+final class pbouda.bytecode.examples.MyEnum$1 extends pbouda.bytecode.examples.MyEnum
+  minor version: 0
+  major version: 54
+  flags: (0x4030) ACC_FINAL, ACC_SUPER, ACC_ENUM
+  this_class: #3                          // pbouda/bytecode/examples/MyEnum$1
+  super_class: #4                         // pbouda/bytecode/examples/MyEnum
+  interfaces: 0, fields: 1, methods: 1, attributes: 3
+Constant pool:
+   #1 = Methodref          #4.#18         // pbouda/bytecode/examples/MyEnum."<init>":(Ljava/lang/String;ILpbouda/bytecode/examples/MyEnum$1;)V
+   #2 = Fieldref           #3.#19         // pbouda/bytecode/examples/MyEnum$1.i:I
+   #3 = Class              #20            // pbouda/bytecode/examples/MyEnum$1
+   #4 = Class              #21            // pbouda/bytecode/examples/MyEnum
+   #5 = Utf8               i
+   #6 = Utf8               I
+   #7 = Utf8               <init>
+   #8 = Utf8               (Ljava/lang/String;I)V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               InnerClasses
+  #14 = Utf8               Lpbouda/bytecode/examples/MyEnum$1;
+  #15 = Utf8               SourceFile
+  #16 = Utf8               MyEnum.java
+  #17 = Utf8               EnclosingMethod
+  #18 = NameAndType        #7:#22         // "<init>":(Ljava/lang/String;ILpbouda/bytecode/examples/MyEnum$1;)V
+  #19 = NameAndType        #5:#6          // i:I
+  #20 = Utf8               pbouda/bytecode/examples/MyEnum$1
+  #21 = Utf8               pbouda/bytecode/examples/MyEnum
+  #22 = Utf8               (Ljava/lang/String;ILpbouda/bytecode/examples/MyEnum$1;)V
+{
+  private int i;
+    descriptor: I
+    flags: (0x0002) ACC_PRIVATE
+
+  pbouda.bytecode.examples.MyEnum$1(java.lang.String, int);
+    descriptor: (Ljava/lang/String;I)V
+    flags: (0x0000)
+    Code:
+      stack=4, locals=3, args_size=3
+         0: aload_0
+         1: aload_1
+         2: iload_2
+         3: aconst_null
+         4: invokespecial #1                  // Method pbouda/bytecode/examples/MyEnum."<init>":(Ljava/lang/String;ILpbouda/bytecode/examples/MyEnum$1;)V
+         7: aload_0
+         8: iconst_1
+         9: putfield      #2                  // Field i:I
+        12: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lpbouda/bytecode/examples/MyEnum$1;
+}
+SourceFile: "MyEnum.java"
+EnclosingMethod: #4.#0                  // pbouda.bytecode.examples.MyEnum
+InnerClasses:
+  final #3;                               // class pbouda/bytecode/examples/MyEnum$1
+
 ```
